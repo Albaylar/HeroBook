@@ -31,5 +31,6 @@ let Superman = HeroModel(name: "Superman", realname: "Clark Kent", Imagename: "s
 let Spiderman  = HeroModel(name: "Spiderman", realname: "Peter Parker", Imagename: "spiderman", city: "New York", job: "Student", coordinate : Coordinate(latitude: 40.74664, longtitude: -74.01231))
 let Ironman  = HeroModel(name: "Ironman", realname: "Tony Stark", Imagename: "ironman", city: "New York", job: "Bussines man", coordinate : Coordinate(latitude: 40.74664, longtitude: -74.01231))
 let Thor  = HeroModel(name: "Thor", realname: "Thor-Odinson", Imagename: "thor", city: "New-Asgard(Norveç)", job: "King", coordinate : Coordinate(latitude: 62.44727, longtitude: 7.66013))
+
 let HeroModelList = [Batman, Superman, Spiderman, Ironman, Thor]
 

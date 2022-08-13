@@ -11,10 +11,11 @@ struct ListView: View {
     var body: some View {
         NavigationView{
             List(HeroModelList) { HeroModel in
-                NavigationLink( destination: DetailView(Chosen: HeroModel), label: { Text(HeroModel.name)
+                NavigationLink( destination: DetailView(Chosen: HeroModel), label: { RowView(hero: HeroModel)
             
-        }).padding()
-            }.navigationTitle(Text(" HERO BOOK "))
+                }).padding(.top)
+            }.navigationTitle(Text(" Hero Book"))
+                
         }
     }
 }

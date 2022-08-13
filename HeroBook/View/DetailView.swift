@@ -10,12 +10,14 @@ import SwiftUI
 struct DetailView: View {
     var Chosen : HeroModel
     var body: some View {
-        NavigationView{
         VStack{
-            MapView(coordinate: Chosen.Location).frame(height: UIScreen.main.bounds.height*0.3)
-                .edgesIgnoringSafeArea(.all)
-            SpecialImageView(image: Image(Chosen.Imagename)).frame(width: UIScreen.main.bounds.width*0.8, height: UIScreen.main.bounds.height*0.25, alignment: .center)
-                .offset(y:UIScreen.main.bounds.height * -0.25).padding(.bottom, UIScreen.main.bounds.height * -0.4)
+            MapView(coordinate: Chosen.Location).frame(height: UIScreen.main.bounds.height*0.4)
+                .edgesIgnoringSafeArea(.top)
+            
+            SpecialImageView(image: Image(Chosen.Imagename))
+                .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.height*0.25, alignment: .top)
+                .offset(y:UIScreen.main.bounds.height * -0.18).padding(.bottom, UIScreen.main.bounds.height * -0.3)
+                
             VStack{
                 HStack{
                 Text(Chosen.name)
@@ -27,8 +29,8 @@ struct DetailView: View {
                         .font(.largeTitle)
                         .italic()
                 }
+                .offset(y: UIScreen.main.bounds.height*0.03)
                 .padding()
-                
                 HStack{
                     Text(Chosen.city)
                         .font(.headline)
@@ -40,17 +42,17 @@ struct DetailView: View {
                         .font(.headline)
                         .foregroundStyle(.black)
                 }
-                .padding([.leading, .bottom, .trailing])
-                
+                .padding()
+                .offset(y: UIScreen.main.bounds.height*0.0)
+                    Spacer()
 
-            }
-            .offset(y: UIScreen.main.bounds.height * -0.01)
-            Spacer()
+            
+            
         }
-        }
+        
     }
 }
-
+}
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         DetailView(Chosen: Batman)
